@@ -2,8 +2,7 @@ package com.example;
 
 public interface Productable {
 
-    Double calcularPrecio();
-
-    void mostrarInformacion();
+    public void calcularPrecio();
+    public void mostrarInformacion();
 
 }
