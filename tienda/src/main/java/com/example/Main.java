@@ -45,9 +45,27 @@ public class Main {
                     Double preciobase = IO.leerDouble();
                     System.out.print("Introduce la cantidad: ");
                     int cantidad = IO.leerInt();
+
+                    int descuento = 0;
+                    boolean descuentovalido = false;
+
+                    do{
+
                     System.out.print("Introduce el descuento: ");
-                    int descuento = IO.leerInt();
+                    descuento = IO.leerInt();
+
+                        if (descuento<0 || descuento>100) {
+
+                            System.out.println("El descuento debe ser un número entre 0 y 100.");
+                            
+                        }
+                        else{
+                            descuentovalido = true;
+                            
+                        }
                     
+                    }while(descuentovalido == false);
+
                     System.out.print("¿Es vendedor externo? (S/N): ");
                     String vendedorSN = IO.leerString();
 
