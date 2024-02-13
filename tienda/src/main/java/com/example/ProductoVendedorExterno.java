@@ -8,4 +8,6 @@ public class ProductoVendedorExterno extends RegistroProductos{
 
     }
 
+    boolean vendedor = false;
+
 }

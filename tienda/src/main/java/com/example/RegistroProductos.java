@@ -6,9 +6,9 @@ public class RegistroProductos implements Productable {
     
     Map<Integer, ProductoBase> inventario = new HashMap<>();
 
-    public void AgregarProducto (String nombreProducto, int idProducto, Double precioBase, int cantidad, int descuento){
+    public void AgregarProducto (String nombreProducto, int idProducto, Double precioBase, int cantidad, int descuento, String nombreVendedor){
 
-        ProductoBase nuevoProducto = new ProductoBase(nombreProducto, idProducto, precioBase, cantidad, descuento);
+        ProductoBase nuevoProducto = new ProductoBase(nombreProducto, idProducto, precioBase, cantidad, descuento, nombreVendedor);
         inventario.put(idProducto, nuevoProducto);
 
     }
@@ -36,6 +36,7 @@ public class RegistroProductos implements Productable {
             System.out.println("Precio Base: " + producto.getPrecioBase());
             System.out.println("Cantidad: " + producto.getCantidad());
             System.out.println("Descuento: " + producto.getDescuento());
+            System.out.println("Vendedor Externo: " + producto.getNombreVendedor());
 
         } else {
 
